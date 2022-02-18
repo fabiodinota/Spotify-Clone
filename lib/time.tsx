@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function millisToMinutesAndSeconds(millis) {
+export default function millisToMinutesAndSeconds(millis: number) {
     const minutes = Math.floor(millis / 60000);
     const seconds:any = ((millis % 60000) / 1000).toFixed(0);
   

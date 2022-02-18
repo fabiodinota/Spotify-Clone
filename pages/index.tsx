@@ -1,6 +1,6 @@
 import Sidebar from "../Components/sidebar"
 import Center from "../Components/Center"
-import { getSession } from "next-auth/react";
+import { getSession, GetSessionParams } from "next-auth/react";
 import Player from "../Components/Player";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: GetSessionParams | undefined) {
   const session = await getSession(context);
 
   return {

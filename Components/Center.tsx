@@ -20,7 +20,7 @@ const colors = [
 
 function Center() {
     const spotifyApi = useSpotify();
-    const { data: session} = useSession();
+    const { data: session } = useSession();
     const [color, setColor] = useState(null);
     const [playlistId, setPlaylistId] = useRecoilState(playlistIdState);
     const [playlist, setPlaylist] = useRecoilState(playlistState)
@@ -34,7 +34,7 @@ function Center() {
         spotifyApi
           .getPlaylist(playlistId)
           .then((data) => {
-            setPlaylist(data.body);
+            setPlaylist(data.body)
           })
           .catch((err) => console.log('Something went wrong!', err));
       }, [spotifyApi, playlistId]);
