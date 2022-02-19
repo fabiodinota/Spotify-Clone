@@ -30,21 +30,7 @@ const spotifyApi = new SpotifyWebApi({
     clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
 });
 
-export const test = async () =>  {
-    const spotifyApi = useSpotify();
-    
-  
-      return fetch(
-            `https://api.spotify.com/v1/me/top/tracks`,
-            
-            {
-                headers: {
-                    Authorization: `Bearer ${spotifyApi.getAccessToken()}`
-                }
-            }
-        );
-        
-}
+
 
 
 
