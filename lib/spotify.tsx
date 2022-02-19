@@ -1,4 +1,5 @@
 import SpotifyWebApi from "spotify-web-api-node";
+import useSpotify from "../hooks/useSpotify";
 
 const scopes = [
     "user-read-email",
@@ -28,6 +29,24 @@ const spotifyApi = new SpotifyWebApi({
     clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
     clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
 });
+
+export const test = async () =>  {
+    const spotifyApi = useSpotify();
+    
+  
+      return fetch(
+            `https://api.spotify.com/v1/me/top/tracks`,
+            
+            {
+                headers: {
+                    Authorization: `Bearer ${spotifyApi.getAccessToken()}`
+                }
+            }
+        );
+        
+}
+
+
 
 export default spotifyApi;
 
