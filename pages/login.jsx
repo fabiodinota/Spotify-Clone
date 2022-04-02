@@ -4,7 +4,7 @@ import { ChevronDoubleRightIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 
 
-function login({providers}) {
+const login = ({providers}) => {
   return (
     <div className='flex flex-col items-center bg-black min-h-screen w-full justify-center'>
       <Image className='mb-5' width={208} height={208} src='https://links.papareact.com/9xl' alt='spotify-logo' />
@@ -23,7 +23,7 @@ function login({providers}) {
     </div>
   )
 }
-export default Login;
+export default login;
 
 export async function getServerSideProps() {
   const providers = await getProviders();
