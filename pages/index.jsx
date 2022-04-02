@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { getSession } from 'next-auth/react';
-import Sidebar from "../Components/Sidebar"
+import Sidebar from "../Components/Sidebar";
 import Center from "../Components/Center";
 import Player from "../Components/Player";
 
