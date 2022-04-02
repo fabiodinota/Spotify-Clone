@@ -23,17 +23,14 @@ function login({providers}) {
     </div>
   )
 }
-/* 14038 */
-export default login;
+export default Login;
 
-export async function getServerSideProps(){
+export async function getServerSideProps() {
   const providers = await getProviders();
 
-
-  return{
+  return {
     props: {
       providers,
     },
   };
-  
 }
