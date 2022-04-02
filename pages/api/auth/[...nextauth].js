@@ -1,6 +1,6 @@
 import NextAuth from 'next-auth';
 import SpotifyProvider from 'next-auth/providers/spotify';
-import SpotifyAPI, { LOGIN_URL } from '../../../lib/spotify';
+import SpotifyApi, { LOGIN_URL } from '../../../lib/spotify';
 
 async function refreshAccessToken(token) {
   try {
