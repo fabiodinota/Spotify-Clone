@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useRecoilState } from 'recoil';
 import { currentTrackIdState, isPlayingState } from '../atoms/songAtom';
 import useSpotify from '../hooks/useSpotify';
@@ -24,8 +25,7 @@ function Song({ order, track }) {
     >
       <div className="flex items-center pl-3 space-x-4 py-1">
         <p>{order + 1}</p>
-        <img
-          className="h-10 w-10"
+        <Image width={40} height={40}
           src={track.track.album.images[0].url}
           alt={track.track.album.name}
         />
