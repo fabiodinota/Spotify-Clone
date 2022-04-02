@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/login.tsx", "pages/_app.tsx", "Components/Song.jsx", "pages/top.tsx", "next.config.js", "prettier.config.js", "postcss.config.js", "tailwind.config.js", "tailwind.config.js", "postcss.config.js", "hooks/useSpotify.jsx", "pages/api/auth/[...nextauth].js", "pages/test.js", "lib/time.jsx", "pages/api/hello.js", "hooks/useSongInfo.jsx", "Components/Songs.jsx", "Components/sidebar.jsx", "atoms/songAtom.jsx", "atoms/playlistAtom.jsx", "lib/spotify.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/login.tsx", "pages/_app.tsx", "Components/Song.jsx", "pages/top.tsx", "next.config.js", "prettier.config.js", "postcss.config.js", "tailwind.config.js", "tailwind.config.js", "postcss.config.js", "hooks/useSpotify.jsx", "pages/api/auth/[...nextauth].js", "pages/test.js", "lib/time.jsx", "pages/api/hello.js", "hooks/useSongInfo.jsx", "Components/Songs.jsx", "Components/Sidebar.jsx", "atoms/songAtom.jsx", "atoms/playlistAtom.jsx", "lib/spotify.jsx"],
   "exclude": ["node_modules"]
 }
