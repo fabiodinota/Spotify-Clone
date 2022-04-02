@@ -19,7 +19,7 @@ const colors = [
     "from-purple-500",
 ]
 
-function Center() {
+const Center = () => {
     const spotifyApi = useSpotify();
     const { data: session } = useSession();
     const [color, setColor] = useState(null);

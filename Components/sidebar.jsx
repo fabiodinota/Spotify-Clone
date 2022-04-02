@@ -14,7 +14,7 @@ import { playlistIdState } from '../atoms/playlistAtom';
 
   import useSpotify from '../hooks/useSpotify';
   
-  function Sidebar() {
+  const Sidebar = () => {
     const spotifyApi = useSpotify();
     const { data: session, status } = useSession();
     const [playlists, setPlaylist] = useState([]);
