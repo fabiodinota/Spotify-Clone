@@ -1,8 +1,8 @@
-import { atom } from 'recoil';
+import {atom} from 'recoil';
 
 export const currentTrackIdState = atom({
   key: 'currentTrackIdState',
-  default: null,
+  default: '',
 });
 
 export const isPlayingState = atom({

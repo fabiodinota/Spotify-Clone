@@ -10,9 +10,9 @@ export async function middleware(req) {
     return NextResponse.next();
   }
 
-  //   if (token && pathname.includes('/login')) {
-  //     return NextResponse.redirect('/');
-  //   }
+  if (token && pathname.includes('/login')) {
+     return NextResponse.redirect('/');
+  }
 
   if (!token && pathname !== "/login") {
     return NextResponse.redirect("/login");
