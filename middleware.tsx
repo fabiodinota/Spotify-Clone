@@ -12,12 +12,12 @@ export async function middleware(req: NextRequest) {
   }
 
   if (token && pathname.includes('/login')) {
-    const dullUrl = new URL('/', req.url);
-     return NextResponse.redirect(dullUrl.toString());
+    const url = new URL('/', req.url)
+    return NextResponse.rewrite(url);
   }
 
   if (!token && pathname !== "/login") {
-    const loginUrl = new URL('/login', req.url);
-    return NextResponse.redirect(loginUrl.toString());
+    const url = req.nextUrl.href
+    return NextResponse.rewrite(url);
   }
 }
